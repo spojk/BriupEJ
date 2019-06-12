@@ -23,4 +23,9 @@ public class AddressServiceImpl implements IAddressService {
     public List<Address> findByCostomerID(Long customerId) {
         return addressMapper.selectByCustomerId(customerId);
     }
+
+    @Override
+    public void saveAddress(Address address) throws  Exception{
+        addressMapper.insert(address);
+    }
 }
