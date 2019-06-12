@@ -33,7 +33,7 @@
     </sqlMapGenerator>
 
     <!--自动生成的*Mapper.java存放路径 -->
-    <javaClientGenerator type="XMLMAPPER" targetPackage="com.briup.apps.briupej.dao"  targetProject="./src/main/java">
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.briup.apps.briupej.mapper" targetProject="./src/main/java">
       <property name="enableSubPackages" value="true" />
     </javaClientGenerator>
 
