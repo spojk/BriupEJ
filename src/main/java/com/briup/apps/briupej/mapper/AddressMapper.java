@@ -2,7 +2,9 @@ package com.briup.apps.briupej.mapper;
 
 import com.briup.apps.briupej.bean.Address;
 import com.briup.apps.briupej.bean.AddressExample;
+
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface AddressMapper {
@@ -93,4 +95,7 @@ public interface AddressMapper {
      * @mbg.generated Wed Jun 12 11:06:43 CST 2019
      */
     int updateByPrimaryKey(Address record);
+
+
+    List<Address> selectByCustomerId(Long customerId);
 }
