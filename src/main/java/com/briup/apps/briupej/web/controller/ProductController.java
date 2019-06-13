@@ -4,6 +4,7 @@ import com.briup.apps.briupej.bean.Product;
 import com.briup.apps.briupej.service.IProductService;
 import com.briup.apps.briupej.utils.Message;
 import com.briup.apps.briupej.utils.MessageUtil;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +17,7 @@ import java.util.List;
  * @author: 刘帅男
  * @create: 2019-06-13 16:22
  **/
+@Api(description ="产品管理相关接口")
 @RestController
 @RequestMapping("/product")
 public class ProductController {

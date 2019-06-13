@@ -93,4 +93,5 @@ public interface OrderLineMapper {
      * @mbg.generated Wed Jun 12 11:06:43 CST 2019
      */
     int updateByPrimaryKey(OrderLine record);
+
 }

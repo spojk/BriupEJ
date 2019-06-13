@@ -93,4 +93,8 @@ public interface CommentMapper {
      * @mbg.generated Wed Jun 12 11:06:43 CST 2019
      */
     int updateByPrimaryKey(Comment record);
+
+    List<Comment> query(Comment comment);
+
+    List<Comment> findAllcomment();
 }

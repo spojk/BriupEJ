@@ -4,6 +4,7 @@ import com.briup.apps.briupej.bean.Customer;
 import com.briup.apps.briupej.service.ICustomerService;
 import com.briup.apps.briupej.utils.Message;
 import com.briup.apps.briupej.utils.MessageUtil;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.constraints.NotNull;
 import java.util.List;
-
+@Api(description ="顾客管理相关接口")
 @Validated
 @RestController
 @RequestMapping("/customer")

@@ -4,6 +4,7 @@ import com.briup.apps.briupej.bean.Address;
 import com.briup.apps.briupej.service.IAddressService;
 import com.briup.apps.briupej.utils.Message;
 import com.briup.apps.briupej.utils.MessageUtil;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -18,6 +19,7 @@ import java.util.List;
  * @author 刘帅男
  * @date 2019/6/12 14:58
  */
+@Api(description ="地址管理相关接口")
 @Validated
 @RestController
 @RequestMapping("/address")
