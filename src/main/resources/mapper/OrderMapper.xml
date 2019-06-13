@@ -300,4 +300,50 @@
       address_id = #{addressId,jdbcType=BIGINT}
     where id = #{id,jdbcType=BIGINT}
   </update>
+    <select id="findAllOrderById" resultType="com.briup.apps.briupej.bean.extend.orderExtend">
+       select
+       c.id as c_id,
+       c.order_time,
+       c.total,
+       c.customer_id,
+       c.waiter_id,
+       c.address_id,
+       t.id as t_id,
+       t.realname,
+       t.password,
+       d.id as d_id,
+       d.realname,
+       d.status,
+       e.id as e_id,
+       e.address,
+       e.telephone
+       from ej_order c
+       left join ej_customer t on c.customer_id=t.id
+       left join ej_waiter d on c.customer_id=d.id
+       left join ej_address e on c.customer_id=e.id
+       where c.id=#{id}
+    </select>
+  <select id="findAllOrder" resultMap="BaseResultMap">
+     select
+       ol1.id as ol1_id,
+       ol1.order_time,
+       ol1.total,
+       ol1.customer_id,
+       ol1.waiter_id,
+       ol1.address_id
+       from ej_order ol1
+       left  join  ej_customer ol2 on ol1.customer_id=ol2.id
+       left join  ej_waiter ol3 on ol1.customer_id=ol3.id
+       left join ej_address ol4 on ol1.customer_id=ol4.id
+  </select>
+  <select id="query" resultMap="BaseResultMap">
+    select * from ej_order
+    <where>
+      <if test="orderTime != null">order_time like concat('%',#{orderTime} ,'%')</if>
+      <if test="total != null">total like concat('%',#{total} ,'%')</if>
+      <if test="customerId != null">and customer_id=#{customerId} </if>
+      <if test="waiterId != null">and waiter_id=#{waiterId} </if>
+      <if test="addressId != null">and address_id=#{addressId} </if>
+    </where>
+  </select>
 </mapper>
