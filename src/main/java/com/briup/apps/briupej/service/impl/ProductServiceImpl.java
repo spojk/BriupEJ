@@ -10,10 +10,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * @program: ej
- * @description: 产品是实现类
- * @author: charles
- * @create: 2019-06-10 17:50
+
+ * @author: 刘帅男
+ * @create: 2019-06-13 16:20
  **/
 @Service
 public class ProductServiceImpl implements IProductService {
@@ -25,4 +24,25 @@ public class ProductServiceImpl implements IProductService {
         ProductExample example = new ProductExample();
         return productMapper.selectByExample(example);
     }
+
+    @Override
+    public Product findById(Long id){
+        return productMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public int deleteById(Long id) throws Exception {
+        return productMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public int saveOrUpdate(Product product) throws Exception {
+        return productMapper.updateByPrimaryKey(product);
+    }
+
+    @Override
+    public int insert(Product product) throws Exception {
+        return productMapper.insert(product);
+    }
+
 }
