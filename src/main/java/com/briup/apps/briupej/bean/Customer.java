@@ -26,6 +26,7 @@ public class Customer {
      *
      * @mbg.generated Wed Jun 12 11:06:43 CST 2019
      */
+
     private String password;
 
     /**

@@ -5,6 +5,7 @@ import com.briup.apps.briupej.bean.extend.orderExtend;
 import com.briup.apps.briupej.service.OrderService;
 import com.briup.apps.briupej.utils.Message;
 import com.briup.apps.briupej.utils.MessageUtil;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
-
+@Api(description ="订单管理相关接口")
 @RestController
 @RequestMapping("Order")
 public class OrderController {
