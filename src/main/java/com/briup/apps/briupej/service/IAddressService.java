@@ -11,4 +11,13 @@ public interface IAddressService {
 
     void saveAddress(Address address) throws Exception;
 
+    Address selectByPrimaryKey(Long id);
+
+    int insert(Address address) throws Exception;
+
+    int deleteByPrimaryKey(Long id) throws Exception;
+
+    int updateByPrimaryKey(Address address) throws Exception;
+
+
 }
