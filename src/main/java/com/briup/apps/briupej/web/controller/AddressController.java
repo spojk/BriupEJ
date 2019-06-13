@@ -32,4 +32,15 @@ public class AddressController {
 
         return MessageUtil.success("查询成功", byCostomerID);
     }
+
+    @ApiOperation("保存用户地址")
+    @GetMapping("addAddress")
+    public Message deleteById(Address address) throws Exception {
+        if (address.getCustomerId() == null) {
+            return MessageUtil.error("用户ID不能为空");
+
+        }
+        addressService.saveAddress(address);
+        return MessageUtil.success("success");
+    }
 }
