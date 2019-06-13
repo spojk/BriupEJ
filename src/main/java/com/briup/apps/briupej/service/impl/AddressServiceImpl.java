@@ -50,5 +50,11 @@ public class AddressServiceImpl implements IAddressService {
         return addressMapper.updateByPrimaryKey(address);
     }
 
-
+    @Override
+    public void batchDelete(Long[] ids){
+        for (Long id:
+                ids ) {
+            addressMapper.deleteByPrimaryKey(id);
+        }
+    }
 }

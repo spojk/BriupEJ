@@ -19,5 +19,5 @@ public interface IAddressService {
 
     int updateByPrimaryKey(Address address) throws Exception;
 
-
+    void batchDelete(Long[] ids) throws Exception;
 }

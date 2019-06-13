@@ -82,6 +82,7 @@ public class AddressController {
     @ApiOperation("通过ID修改数据")
     @GetMapping("/updateByPrimaryKey")
     public Message updateByPrimary(Address address){
+
         try{
             addressService.updateByPrimaryKey(address);
             return MessageUtil.success("更新成功！");
@@ -91,5 +92,18 @@ public class AddressController {
         }
     }
 
+    @ApiOperation("批量删除Address")
+    @GetMapping("/batchDelete")
+    public Message batchDelete(Long[] ids){
+        if (ids==null){
+            return MessageUtil.error("失败!");
+        }
+        try {
+            addressService.batchDelete(ids);
+            return MessageUtil.success("成功!");
+        } catch (Exception e) {
+            return MessageUtil.error("失败!");
+        }
 
+    }
 }
