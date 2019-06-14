@@ -4,7 +4,7 @@ package com.briup.apps.briupej.service.impl;
 import com.briup.apps.briupej.bean.Waiter;
 import com.briup.apps.briupej.bean.WaiterExample;
 import com.briup.apps.briupej.mapper.WaiterMapper;
-import com.briup.apps.briupej.service.WaiterService;
+import com.briup.apps.briupej.service.IWaiterService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/waitter")
-public class WaiterServiceImpl implements WaiterService {
+public class WaiterServiceImpl implements IWaiterService {
     @Resource
     private WaiterMapper waiterMapper;
 

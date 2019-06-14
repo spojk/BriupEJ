@@ -4,7 +4,7 @@ import com.briup.apps.briupej.bean.Waiter;
 
 import java.util.List;
 
-public interface WaiterService {
+public interface IWaiterService {
 
     List<Waiter> query(Waiter waiter);
     List<Waiter> findAll();
