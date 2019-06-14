@@ -268,4 +268,32 @@
       order_id = #{orderId,jdbcType=BIGINT}
     where id = #{id,jdbcType=BIGINT}
   </update>
+    <select id="findAllOrderLineById" resultType="com.briup.apps.briupej.bean.extend.OrderLine_Extend">
+      select
+            eol.number,
+            eo.order_time,
+            eo.total,
+            ep.name,
+            ep.description,
+            ep.status,
+            ep.photo
+            from ej_order_line eol
+            left join ej_order eo on eol.order_id=eo.id
+            left join ej_product ep on eol.product_id=ep.id
+            where eol.id=#{id}
+
+    </select>
+  <select id="findAllOrderLine" resultType="com.briup.apps.briupej.bean.extend.OrderLine_Extend">
+     select
+            eol.number,
+            eo.order_time,
+            eo.total,
+            ep.name,
+            ep.description,
+            ep.status,
+            ep.photo
+            from ej_order_line eol
+            left join ej_order eo on eol.order_id=eo.id
+            left join ej_product ep on eol.product_id=ep.id
+  </select>
 </mapper>
