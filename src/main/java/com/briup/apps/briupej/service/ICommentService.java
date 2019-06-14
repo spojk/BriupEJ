@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-public interface CommentService {
+public interface ICommentService {
 
         long countByExample(CommentExample example);
         int deleteByExample(CommentExample example);

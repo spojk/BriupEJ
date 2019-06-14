@@ -2,7 +2,7 @@ package com.briup.apps.briupej.web.controller;
 
 import com.briup.apps.briupej.bean.Order;
 import com.briup.apps.briupej.bean.extend.orderExtend;
-import com.briup.apps.briupej.service.OrderService;
+import com.briup.apps.briupej.service.IOrderService;
 import com.briup.apps.briupej.utils.Message;
 import com.briup.apps.briupej.utils.MessageUtil;
 import io.swagger.annotations.Api;
@@ -20,7 +20,7 @@ import java.util.List;
 public class OrderController {
 
     @Autowired
-    private OrderService orderService;
+    private IOrderService orderService;
 
     /**@GetMapping("/selectByPrimaryKey")
     public Message selectByPrimaryKey(@ApiParam(value = "主键",required = true) @RequestParam(value = "id")long id){

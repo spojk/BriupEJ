@@ -4,14 +4,14 @@ import com.briup.apps.briupej.bean.Order;
 import com.briup.apps.briupej.bean.OrderExample;
 import com.briup.apps.briupej.bean.extend.orderExtend;
 import com.briup.apps.briupej.mapper.OrderMapper;
-import com.briup.apps.briupej.service.OrderService;
+import com.briup.apps.briupej.service.IOrderService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
 
 @Service
-public class OrderServiceImpl implements OrderService {
+public class OrderServiceImpl implements IOrderService {
 
     @Resource
     private OrderMapper orderMapper;

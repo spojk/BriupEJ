@@ -3,7 +3,7 @@ package com.briup.apps.briupej.web.controller;
 
 import com.briup.apps.briupej.bean.Comment;
 import com.briup.apps.briupej.bean.extend.CommentExtend;
-import com.briup.apps.briupej.service.CommentService;
+import com.briup.apps.briupej.service.ICommentService;
 import com.briup.apps.briupej.utils.Message;
 import com.briup.apps.briupej.utils.MessageUtil;
 import io.swagger.annotations.Api;
@@ -23,7 +23,7 @@ import java.util.List;
 public class CommentController {
 
     @Autowired   //自动注入
-    private CommentService commentService;
+    private ICommentService commentService;
 
 
 

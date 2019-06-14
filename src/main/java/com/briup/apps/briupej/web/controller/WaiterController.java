@@ -2,7 +2,7 @@ package com.briup.apps.briupej.web.controller;
 
 
 import com.briup.apps.briupej.bean.Waiter;
-import com.briup.apps.briupej.service.WaiterService;
+import com.briup.apps.briupej.service.IWaiterService;
 import com.briup.apps.briupej.utils.Message;
 import com.briup.apps.briupej.utils.MessageUtil;
 import io.swagger.annotations.Api;
@@ -21,7 +21,7 @@ public class WaiterController {
 
 
     @Autowired
-    private WaiterService waiterService;
+    private IWaiterService waiterService;
 
     @ApiOperation("模糊查询")
     @GetMapping("query")

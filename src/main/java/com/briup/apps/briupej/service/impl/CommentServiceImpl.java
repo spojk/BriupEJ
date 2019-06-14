@@ -5,14 +5,14 @@ import com.briup.apps.briupej.bean.CommentExample;
 import com.briup.apps.briupej.bean.extend.CommentExtend;
 import com.briup.apps.briupej.mapper.CommentMapper;
 import com.briup.apps.briupej.mapper.extend.CommentExtendMapper;
-import com.briup.apps.briupej.service.CommentService;
+import com.briup.apps.briupej.service.ICommentService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
 
 @Service
-public class CommentServiceImpl implements CommentService {
+public class CommentServiceImpl implements ICommentService {
     @Resource
     CommentExtendMapper commentExtendMapper;
     @Resource
