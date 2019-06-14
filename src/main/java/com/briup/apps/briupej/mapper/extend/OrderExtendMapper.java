@@ -3,7 +3,7 @@ import com.briup.apps.briupej.bean.extend.CommentExtend;
 
 import java.util.List;
 
-public interface CommentExtendMapper {
+public interface OrderExtendMapper {
 
     List<CommentExtend> selectAll(long id);
 
