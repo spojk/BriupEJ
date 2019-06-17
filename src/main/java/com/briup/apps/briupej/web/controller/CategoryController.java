@@ -2,6 +2,7 @@ package com.briup.apps.briupej.web.controller;
 
 import com.briup.apps.briupej.bean.Category;
 import com.briup.apps.briupej.bean.CategoryExample;
+import com.briup.apps.briupej.bean.extend.CategoryExtend;
 import com.briup.apps.briupej.service.ICategoryService;
 import com.briup.apps.briupej.service.IProductService;
 import com.briup.apps.briupej.utils.Message;
@@ -93,6 +94,13 @@ public class CategoryController {
         } catch (Exception e) {
             return MessageUtil.error("失败!");
         }
+
+    }
+    @ApiOperation("通过id查询商品")
+    @GetMapping("findAllP")
+    public Message findAllP(Long id) {
+        List<CategoryExtend> list=categoryService.findAllP(id);
+        return MessageUtil.success("sucess",list);
 
     }
 }

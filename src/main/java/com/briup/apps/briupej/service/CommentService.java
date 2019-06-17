@@ -2,7 +2,6 @@ package com.briup.apps.briupej.service;
 
 import com.briup.apps.briupej.bean.Comment;
 import com.briup.apps.briupej.bean.CommentExample;
-import com.briup.apps.briupej.bean.extend.CommentExtend;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

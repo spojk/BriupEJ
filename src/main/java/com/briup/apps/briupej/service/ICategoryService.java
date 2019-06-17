@@ -2,6 +2,7 @@ package com.briup.apps.briupej.service;
 
 import com.briup.apps.briupej.bean.Category;
 import com.briup.apps.briupej.bean.CategoryExample;
+import com.briup.apps.briupej.bean.extend.CategoryExtend;
 
 import java.util.List;
 
@@ -22,4 +23,6 @@ public interface ICategoryService {
     Category selectByPrimaryKey(Long id);
 
     void batchDelete(Long[] ids) throws Exception;
+
+    List<CategoryExtend>  findAllP(Long id);
 }

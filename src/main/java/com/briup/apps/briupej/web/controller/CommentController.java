@@ -2,7 +2,6 @@ package com.briup.apps.briupej.web.controller;
 
 
 import com.briup.apps.briupej.bean.Comment;
-import com.briup.apps.briupej.bean.extend.CommentExtend;
 import com.briup.apps.briupej.service.CommentService;
 import com.briup.apps.briupej.utils.Message;
 import com.briup.apps.briupej.utils.MessageUtil;
