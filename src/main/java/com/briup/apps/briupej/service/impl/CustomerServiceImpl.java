@@ -2,7 +2,9 @@ package com.briup.apps.briupej.service.impl;
 
 import com.briup.apps.briupej.bean.Customer;
 import com.briup.apps.briupej.bean.CustomerExample;
+import com.briup.apps.briupej.bean.extend.CustomerExtend;
 import com.briup.apps.briupej.mapper.CustomerMapper;
+import com.briup.apps.briupej.mapper.extend.CustomerExtendMapper;
 import com.briup.apps.briupej.service.ICustomerService;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +16,8 @@ import java.util.List;
 public class CustomerServiceImpl implements ICustomerService {
     @Resource
     private CustomerMapper customerMapper;
+    @Resource
+    private CustomerExtendMapper customerExtendMapper;
 
     @Override
     public List<Customer> findAll() {
@@ -46,5 +50,21 @@ public class CustomerServiceImpl implements ICustomerService {
         for (long id : ids) {
             customerMapper.deleteByPrimaryKey(id);
         }
+    }
+    @Override
+    public List<CustomerExtend> findMyMessage(Long id) {
+
+        return customerExtendMapper.findMyMessage(id);
+    }
+
+    @Override
+    public List<CustomerExtend> findMyAddress(Long id) {
+
+        return customerExtendMapper.findMyAddress(id);
+    }
+
+    @Override
+    public List<CustomerExtend> findMyOrder(Long id) {
+        return customerExtendMapper.findMyOrder(id);
     }
 }

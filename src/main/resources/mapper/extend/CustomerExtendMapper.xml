@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.briup.apps.briupej.mapper.extend.CustomerExtendMapper" >
+    <select  resultMap="BaseResultMap" id="findMyAddress" >
+    select
+      ad.id as ad_id,
+      ad.province,
+      ad.city,
+      ad.area,
+      ad.address,
+      ad.telephone
+      from ej_customer cu left join  ej_address ad
+      on cu.id=ad.customer_id and cu.id=#{id}
+</select>
+    <resultMap id="BaseResultMap" type="com.briup.apps.briupej.bean.extend.CustomerExtend" >
+        <association property="address" javaType="com.briup.apps.briupej.bean.Address" >
+            <id column="o_id" property="id"/>
+            <result column="province" property="province" />
+            <result column="city" property="city"/>
+            <result column="area" property="area"/>
+            <result column="address" property="address"/>
+            <result column="telephone" property="telephone"/>
+        </association>
+    </resultMap>
+    <select  resultMap="BaseResultMap1" id="findMyMessage" >
+    select * from ej_customer cu  where cu.id=#{id}
+</select>
+    <resultMap id="BaseResultMap1" type="com.briup.apps.briupej.bean.Customer">
+        <id column="id" jdbcType="BIGINT" property="id" />
+        <result column="telephone" jdbcType="VARCHAR" property="telephone" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
+        <result column="realname" jdbcType="VARCHAR" property="realname" />
+        <result column="status" jdbcType="VARCHAR" property="status" />
+        <result column="photo" jdbcType="VARCHAR" property="photo" />
+    </resultMap>
+    <select  resultMap="BaseResultMap2" id="findMyOrder" >
+    select
+      o.id as o_id,
+      o.order_time,
+      o.total,
+      o.waiter_id,
+      o.address_id
+      from ej_order o right join  ej_customer cu
+      on o.customer_id=cu.id and cu.id=#{id}
+</select>
+    <resultMap id="BaseResultMap2" type="com.briup.apps.briupej.bean.Order">
+        <id column="o_id" jdbcType="BIGINT" property="id"/>
+        <result column="order_time" jdbcType="BIGINT" property="orderTime"/>
+        <result column="total" jdbcType="DOUBLE" property="total"/>
+        <result column="customer_id" jdbcType="BIGINT" property="customerId"/>
+        <result column="waiter_id" jdbcType="BIGINT" property="waiterId"/>
+        <result column="address_id" jdbcType="BIGINT" property="addressId"/>
+    </resultMap>
+</mapper>
