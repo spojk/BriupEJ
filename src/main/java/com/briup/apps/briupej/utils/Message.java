@@ -1,10 +1,11 @@
 package com.briup.apps.briupej.utils;
 
+
 public class Message {
     private Integer status;
     private String message;
     private Object data;
-    private Long timestamp;
+    private String timestamp;
 
     public Integer getStatus() {
         return status;
@@ -30,11 +31,11 @@ public class Message {
         this.data = data;
     }
 
-    public Long getTimestamp() {
+    public String getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(Long timestamp) {
+    public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
 }
