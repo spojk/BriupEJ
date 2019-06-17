@@ -16,10 +16,6 @@ import javax.annotation.Resource;
 import java.util.Date;
 import java.util.List;
 
-/**
- * @author rui
- * @create 2019-06-10 11:48
- */
 @Service
 public class IOrderServiceImpl implements IOrderService {
 
