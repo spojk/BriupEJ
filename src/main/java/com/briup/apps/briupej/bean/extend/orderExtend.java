@@ -1,37 +1,57 @@
 package com.briup.apps.briupej.bean.extend;
 
-import com.briup.apps.briupej.bean.Address;
-import com.briup.apps.briupej.bean.Customer;
-import com.briup.apps.briupej.bean.Order;
-import com.briup.apps.briupej.bean.Waiter;
+import com.briup.apps.briupej.bean.*;
+
+import java.util.List;
 
 public class orderExtend extends Order {
 
-    private Customer customer_ids;
-    private Waiter waiter_id;
-    private Address address_id;
+    private Comment comment;  //评论
 
-    public Customer getCustomer_ids() {
-        return customer_ids;
+    private Address address;  //地址
+
+    private Customer customer;  //客户
+
+    private Waiter waiter;   //员工
+    private List<OrderLine> orderLines;
+
+    public List<OrderLine> getOrderLines() {
+        return orderLines;
     }
 
-    public void setCustomer_ids(Customer customer_ids) {
-        this.customer_ids = customer_ids;
+    public void setOrderLines(List<OrderLine> orderLines) {
+        this.orderLines = orderLines;
     }
 
-    public Waiter getWaiter_id() {
-        return waiter_id;
+    public Comment getComment() {
+        return comment;
     }
 
-    public void setWaiter_id(Waiter waiter_id) {
-        this.waiter_id = waiter_id;
+    public void setComment(Comment comment) {
+        this.comment = comment;
     }
 
-    public Address getAddress_id() {
-        return address_id;
+    public Address getAddress() {
+        return address;
     }
 
-    public void setAddress_id(Address address_id) {
-        this.address_id = address_id;
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Waiter getWaiter() {
+        return waiter;
+    }
+
+    public void setWaiter(Waiter waiter) {
+        this.waiter = waiter;
     }
 }
