@@ -2,7 +2,7 @@ package com.briup.apps.briupej.bean.VM;
 
 /**
  * @author wzy
- * @create 2019-06-13 17:17
+ * @create 2019-06-17 10:10
  */
 public class OrderVM {
     private Long orderId;
