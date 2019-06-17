@@ -6,6 +6,7 @@ import com.briup.apps.briupej.service.ICategoryService;
 import com.briup.apps.briupej.service.IProductService;
 import com.briup.apps.briupej.utils.Message;
 import com.briup.apps.briupej.utils.MessageUtil;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import jdk.internal.org.objectweb.asm.tree.TryCatchBlockNode;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +20,7 @@ import java.util.List;
  * @author 刘帅男
  * @date 2019/6/13 14:13
  */
+@Api(description = "分类管理相关接口")
 @RestController
 @RequestMapping("/category")
 public class CategoryController {
