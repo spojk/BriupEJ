@@ -6,13 +6,13 @@ import java.util.List;
 
 public class orderExtend extends Order {
 
-    private Comment comment;  //评论
+    private Comment comment;
 
-    private Address address;  //地址
+    private Address address;
 
-    private Customer customer;  //客户
+    private Customer customer;
 
-    private Waiter waiter;   //员工
+    private Waiter waiter;
     private List<OrderLine> orderLines;
 
     public List<OrderLine> getOrderLines() {
